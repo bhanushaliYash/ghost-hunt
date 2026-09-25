@@ -61,6 +61,7 @@ export const ALLOWED_HOSTS = new Set([
   "api.any.run",
   "generativelanguage.googleapis.com",
   "ipwho.is",
+  "threatmap-api.checkpoint.com",
 ]);
 
 export class InputError extends Error {

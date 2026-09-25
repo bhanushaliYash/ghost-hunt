@@ -4,7 +4,7 @@ import type { NextConfig } from "next";
  * Security headers are part of the graded threat model.
  * script-src allows unsafe-eval only in development, where Next needs it
  * for refresh. Production does not.
- * Tile images are the only third-party pixels, and they are OpenStreetMap.
+ * Tile images are the dark basemap. Attack data is fetched server-side.
  */
 const isDev = process.env.NODE_ENV !== "production";
 
@@ -12,7 +12,7 @@ const csp = [
   "default-src 'self'",
   `script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ""}`,
   "style-src 'self' 'unsafe-inline'",
-  "img-src 'self' data: blob: https://tile.openstreetmap.org https://*.tile.openstreetmap.org",
+  "img-src 'self' data: blob: https://services.arcgisonline.com https://server.arcgisonline.com",
   "connect-src 'self'",
   "font-src 'self'",
   "frame-ancestors 'none'",

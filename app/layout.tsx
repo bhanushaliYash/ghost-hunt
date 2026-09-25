@@ -2,6 +2,7 @@ import "@fontsource/geist/400.css";
 import "@fontsource/geist/500.css";
 import "@fontsource/geist-mono/400.css";
 import { NavRail } from "@/components/NavRail";
+import { TopSearch } from "@/components/TopSearch";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -15,7 +16,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body>
         <NavRail />
-        <div className="shell">{children}</div>
+        <div className="shell">
+          <TopSearch />
+          {children}
+        </div>
       </body>
     </html>
   );

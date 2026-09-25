@@ -1,8 +1,8 @@
 # Ghost Hunt
 
-First-look triage for an Optiv fusion-center analyst on shift.
+First-look triage for an analyst on shift.
 
-An Optiv fusion-center analyst on shift cannot say, in the first two minutes, whether a hash, IP, domain, or phish header is worth escalating and what to patch, because that answer is split across intel tabs, MITRE, NVD, and mail tools.
+The hash is in one tab. The IP is in another. The phish header is in a text file. The patch is on a vendor page you have not opened yet. Ghost Hunt puts the score, the disagreement, the technique, and the patch on one screen.
 
 The case card puts the score, the sources that disagree, the ATT&CK technique, the CVE, and the patch link in one place. It does not store customer data. Pins are optional and off until `DATABASE_URL` is set.
 

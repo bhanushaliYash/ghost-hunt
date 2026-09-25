@@ -32,18 +32,14 @@ export default function HomePage() {
     <main className="page">
       <Breadcrumbs items={[{ label: "Ghost Hunt" }]} />
       <h1>Ghost Hunt</h1>
-      <p className="lede">
-        An Optiv fusion-center analyst on shift cannot say, in the first two minutes, whether a hash, IP, domain, or
-        phish header is worth escalating and what to patch, because that answer is split across intel tabs, MITRE, NVD,
-        and mail tools.
-      </p>
-      <p className="quiet">User: the analyst triaging an indicator during a live hunt.</p>
+      <p className="lede">The trail breaks the moment you change tabs.</p>
+      <p className="quiet">A hash in one tool. An address in another. A header in a paste. A patch on a page you have not opened. Ghost Hunt holds the line.</p>
       {board?.sample.length ? <p className="chip sample">Sample: {board.sample.join(", ")}</p> : null}
       {error ? <p className="quiet">{error}</p> : null}
       <div className="figures">
         <div>
           <b>{board?.points.length ?? "–"}</b>
-          <span>map points</span>
+          <span>tracked points</span>
         </div>
         <div>
           <b>{board?.feed.length ?? "–"}</b>
@@ -54,7 +50,9 @@ export default function HomePage() {
           <span>patch queue</span>
         </div>
       </div>
-      <div className="map-wrap">{board ? <ThreatMap points={board.points} /> : <p className="quiet">Loading map…</p>}</div>
+      <div className="map-wrap">
+        <ThreatMap />
+      </div>
       <div className="grid-2">
         <section>
           <h2>Threat feed</h2>
