@@ -1,0 +1,37 @@
+{
+  "techniques": [
+    {"id":"T1566","name":"Phishing","description":"Adversaries send messages to get a user to open a link or attachment.","tactics":["initial-access"]},
+    {"id":"T1566.001","name":"Spearphishing Attachment","description":"A targeted message carries a malicious file.","tactics":["initial-access"]},
+    {"id":"T1566.002","name":"Spearphishing Link","description":"A targeted message carries a link to a credential or payload site.","tactics":["initial-access"]},
+    {"id":"T1190","name":"Exploit Public-Facing Application","description":"Adversaries exploit a bug in an internet-facing service.","tactics":["initial-access"]},
+    {"id":"T1078","name":"Valid Accounts","description":"Adversaries use real credentials to get in or stay in.","tactics":["defense-evasion","persistence","privilege-escalation","initial-access"]},
+    {"id":"T1059","name":"Command and Scripting Interpreter","description":"Adversaries abuse shells and scripts to run commands.","tactics":["execution"]},
+    {"id":"T1059.001","name":"PowerShell","description":"Commands run through PowerShell.","tactics":["execution"]},
+    {"id":"T1055","name":"Process Injection","description":"Code runs inside another process to hide.","tactics":["defense-evasion","privilege-escalation"]},
+    {"id":"T1027","name":"Obfuscated Files or Information","description":"Payloads are encoded or packed to avoid inspection.","tactics":["defense-evasion"]},
+    {"id":"T1071","name":"Application Layer Protocol","description":"Command traffic blends into normal application protocols.","tactics":["command-and-control"]},
+    {"id":"T1071.001","name":"Web Protocols","description":"C2 over HTTP or HTTPS.","tactics":["command-and-control"]},
+    {"id":"T1105","name":"Ingress Tool Transfer","description":"Tools are copied onto a compromised host.","tactics":["command-and-control"]},
+    {"id":"T1041","name":"Exfiltration Over C2 Channel","description":"Stolen data leaves over the same channel used for commands.","tactics":["exfiltration"]},
+    {"id":"T1486","name":"Data Encrypted for Impact","description":"Ransomware encrypts data to deny access.","tactics":["impact"]},
+    {"id":"T1110","name":"Brute Force","description":"Repeated guesses against a login.","tactics":["credential-access"]},
+    {"id":"T1583","name":"Acquire Infrastructure","description":"Adversaries buy or rent servers, domains, or accounts.","tactics":["resource-development"]},
+    {"id":"T1583.001","name":"Domains","description":"Domains are registered for phishing or C2.","tactics":["resource-development"]},
+    {"id":"T1003","name":"OS Credential Dumping","description":"Credentials are pulled from the operating system.","tactics":["credential-access"]},
+    {"id":"T1053","name":"Scheduled Task/Job","description":"Execution is tied to a scheduler.","tactics":["execution","persistence","privilege-escalation"]},
+    {"id":"T1218","name":"System Binary Proxy Execution","description":"A trusted signed binary launches something else.","tactics":["defense-evasion"]}
+  ],
+  "groups": [
+    {"id":"G0007","name":"APT28","description":"A long-running group associated with phishing and credential theft.","techniques":["T1566","T1078","T1071"]},
+    {"id":"G0016","name":"APT29","description":"A group known for stealthy intrusions and valid-account use.","techniques":["T1078","T1566","T1027"]},
+    {"id":"G0094","name":"Kimsuky","description":"A group that leans on spearphishing against research and government targets.","techniques":["T1566.001","T1566.002"]},
+    {"id":"G0046","name":"FIN7","description":"A financially motivated group that has used phishing and point-of-sale intrusions.","techniques":["T1566","T1059"]}
+  ],
+  "software": [
+    {"id":"S0154","name":"Cobalt Strike","description":"A commercial post-exploitation tool. The Beacon implant often uses HTTPS. Default TLS profiles are leads, then confirm.","techniques":["T1071.001","T1055","T1105","T1059"]},
+    {"id":"S0650","name":"QakBot","description":"A modular loader and stealer that has used email threads and C2 infrastructure.","techniques":["T1566.001","T1071","T1105"]},
+    {"id":"S0367","name":"Emotet","description":"A botnet and loader historically delivered by email.","techniques":["T1566.001","T1071"]},
+    {"id":"S0570","name":"BitPaymer","description":"Ransomware that encrypts files for impact.","techniques":["T1486"]},
+    {"id":"S0089","name":"PowerShell","description":"Windows shell often abused for execution.","techniques":["T1059.001"]}
+  ]
+}

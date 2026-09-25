@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Ghost Hunt",
+  "version": "0.1.0",
+  "description": "Score an indicator after you confirm. Does not watch browsing in the background.",
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Ghost Hunt"
+  },
+  "permissions": ["storage", "activeTab"],
+  "host_permissions": ["http://localhost:3000/*", "http://127.0.0.1:3000/*"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}

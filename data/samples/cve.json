@@ -1,0 +1,18 @@
+{
+  "id": "CVE-2024-3094",
+  "description": "Malicious code was present in xz 5.6.0 and 5.6.1, which can modify sshd authentication. Sample record used when NVD does not answer.",
+  "cvss": 10,
+  "severity": "CRITICAL",
+  "vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H",
+  "kev": true,
+  "epss": 0.85,
+  "patchUrl": "https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-xz-utils-data-compression-library-cve-2024-3094",
+  "patchLabel": "CISA alert",
+  "references": [
+    {
+      "url": "https://www.cisa.gov/news-events/alerts/2024/03/29/reported-supply-chain-compromise-affecting-xz-utils-data-compression-library-cve-2024-3094",
+      "label": "Vendor advisory"
+    }
+  ],
+  "sample": true
+}

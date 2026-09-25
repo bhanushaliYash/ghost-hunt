@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Ghost Hunt</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <h1>Ghost Hunt</h1>
+    <label>
+      Indicator
+      <input id="q" type="text" placeholder="URL, domain, or IP" />
+    </label>
+    <div class="row">
+      <button id="score" type="button">Score</button>
+      <button id="scan" type="button">Scan this page</button>
+    </div>
+    <p id="confirm" hidden>
+      This sends the current tab URL to your Ghost Hunt server. It is not scanned until you confirm.
+      <button id="confirm-btn" type="button">Confirm scan</button>
+    </p>
+    <p id="status"></p>
+    <section id="card" hidden>
+      <p class="score" id="score-num"></p>
+      <p id="confidence"></p>
+      <p id="summary"></p>
+    </section>
+    <script src="popup.js"></script>
+  </body>
+</html>

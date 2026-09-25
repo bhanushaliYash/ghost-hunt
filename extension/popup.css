@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  width: 320px;
+  padding: 12px;
+  background: #0c0e0b;
+  color: #d7e0d4;
+  font: 13px "Segoe UI", sans-serif;
+}
+h1 { font-size: 14px; letter-spacing: 0.08em; color: #b6ff3b; margin: 0 0 8px; }
+label { display: block; color: #8d988a; font-size: 11px; }
+input, button {
+  font: inherit;
+  color: inherit;
+  background: #141714;
+  border: 1px solid #2c3429;
+  padding: 6px 8px;
+}
+input { width: 100%; box-sizing: border-box; margin-top: 4px; }
+.row { display: flex; gap: 6px; margin-top: 8px; }
+button { cursor: pointer; }
+#score { background: #b6ff3b; color: #10140f; border-color: #b6ff3b; }
+.score { font: 32px ui-monospace, monospace; color: #b6ff3b; margin: 8px 0 0; }
+#status, #confidence, #summary { color: #8d988a; }

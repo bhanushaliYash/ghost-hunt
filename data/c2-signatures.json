@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Cobalt Strike default HTTPS",
+    "jarm": ["07d14d16d21d21d07c42d41d00041d24a458a375eef0c576d23a7bab9a9fb1"],
+    "certIncludes": [],
+    "headerIncludes": [],
+    "note": "Published JARM for a default Cobalt Strike team server. A match is a lead. Benign software can share it."
+  },
+  {
+    "name": "Metasploit certificate subject",
+    "jarm": [],
+    "certIncludes": ["Metasploit"],
+    "headerIncludes": [],
+    "note": "Default Metasploit listeners have used certificate subjects containing Metasploit. Treat as a lead."
+  },
+  {
+    "name": "Sliver HTTP server header",
+    "jarm": [],
+    "certIncludes": [],
+    "headerIncludes": ["server: sliver"],
+    "note": "Some default Sliver configs advertise this server header. A renamed profile will not match."
+  }
+]
